@@ -39,7 +39,7 @@ const myGame = new Game({
       // Code that runs as soon as the game is on the screen
       scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#FFF' });
       this.add.image(0, 0, "background").setOrigin(0, 0)
-      player = this.physics.add.image(200, 0, "andy").setOrigin(0, 0)
+      player = this.physics.add.image(400, 0, "andy").setOrigin(0, 0)
       player.setBounce(0.5)
       player.setCollideWorldBounds(true)
       this.physics.add.overlap(
@@ -61,7 +61,7 @@ const myGame = new Game({
       } else if (cursors.left.isDown) {
         player.setVelocityX(-160)
       } else if (cursors.up.isDown) {
-        player.setVelocityY(-240)
+        player.setVelocityY(-280)
       }
       frameCount += 1
       if (frameCount % 165 == 0) {
